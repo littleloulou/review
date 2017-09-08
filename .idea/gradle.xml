@@ -9,7 +9,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/aboutactivity" />
+            <option value="$PROJECT_DIR$/aidlclinet" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/ipc" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

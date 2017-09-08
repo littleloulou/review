@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MyReview.iml" filepath="$PROJECT_DIR$/MyReview.iml" />
       <module fileurl="file://$PROJECT_DIR$/aboutactivity/aboutactivity.iml" filepath="$PROJECT_DIR$/aboutactivity/aboutactivity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aidlclinet/aidlclinet.iml" filepath="$PROJECT_DIR$/aidlclinet/aidlclinet.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ipc/ipc.iml" filepath="$PROJECT_DIR$/ipc/ipc.iml" />
     </modules>
   </component>
 </project>

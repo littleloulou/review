@@ -59,6 +59,18 @@ public class MainActivity extends BaseExampleActivity {
             }
         });
 
+        findViewById(R.id.btn_no).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //no actoin activity
+                //没有action的activity是不可以被启动的
+                Intent intent = new Intent();
+                intent.setData(Uri.parse("http://www.baidu.com"));
+                intent.addCategory("com.lph.intent_noaction");
+                startActivity(intent);
+            }
+        });
+
     }
 
     {

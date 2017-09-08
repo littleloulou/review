@@ -28,14 +28,27 @@
             android:taskAffinity="com.lph.task" />
         <activity android:name=".CalledActivity">
             <intent-filter>
-                <action android:name="com.lph.intent_SEND"/>
-                <action android:name="com.lph.intent_RECEIVER"/>
-                <action android:name="com.lph.intent_SEND_1"/>
-                <action android:name="com.lph.intent_SEND_2"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="com.lph.intent_Category"/>
-                <data android:scheme="http" android:host="www.baidu.com" android:mimeType="jpg/*"/>
-                <data android:scheme="file"  android:mimeType="audio/*"/>
+                <action android:name="com.lph.intent_SEND" />
+                <action android:name="com.lph.intent_RECEIVER" />
+                <action android:name="com.lph.intent_SEND_1" />
+                <action android:name="com.lph.intent_SEND_2" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.lph.intent_Category" />
+
+                <data
+                    android:host="www.baidu.com"
+                    android:mimeType="jpg/*"
+                    android:scheme="http" />
+                <data
+                    android:mimeType="audio/*"
+                    android:scheme="file" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".NoActionActivity">
+            <intent-filter>
+                <data android:scheme="http" android:host="www.baidu.com"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.lph.intent_noaction"/>
             </intent-filter>
         </activity>
     </application>
