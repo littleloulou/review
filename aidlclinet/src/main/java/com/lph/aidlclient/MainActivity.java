@@ -19,6 +19,7 @@ import android.view.View;
 
 
 import com.lph.ipc.IPareclModelManager;
+import com.lph.ipc.OnNewModeAddListener;
 import com.lph.ipc.model.ParcelMode;
 
 import java.util.List;
@@ -29,6 +30,29 @@ public class MainActivity extends AppCompatActivity {
     private MyConnection mServerConn = new MyConnection();
     private IPareclModelManager mManager;
     private final static String TAG = "MainActivity_Messenger";
+    //这里非常需要注意的是：一定要使用OnNewModeAddListener.Stub 这个类，不要使用直接OnNewModeAddListener这个接口
+    //这个接口就是一个普通的接口，是不支持aidl进程间调用的，否则服务端得到的回调对象一直是null
+    private OnNewModeAddListener.Stub mOnNewModeAddLisenter = new OnNewModeAddListener.Stub() {
+        @Override
+        public void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat, double aDouble, String aString) throws RemoteException {
+
+        }
+
+        @Override
+        public void OnNewsModeAdd(ParcelMode newMode) throws RemoteException {
+            Log.d(TAG,"  OnNewsModeAdd"+newMode);
+        }
+
+       /*
+        注意：千万不要重写此方法
+       @Override
+        public IBinder asBinder() {
+            return null;
+        }*/
+    };
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +101,13 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("MainActivity", "server connected success");
             } else {
                 Log.d("MainActivity", "server connected failure");
+            }
+
+            try {
+                Log.d(TAG, "mOnNewModeAddLisenter" + mOnNewModeAddLisenter);
+                mManager.registerListener(mOnNewModeAddLisenter);
+            } catch (RemoteException e) {
+                e.printStackTrace();
             }
         }
 
@@ -177,7 +208,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case FROM_CLIENT_GETOBJ:
                     msg.getData().setClassLoader(getClass().getClassLoader());
-                    ParcelMode objData =  msg.getData().getParcelable("objData");
+                    ParcelMode objData = msg.getData().getParcelable("objData");
                     Log.i(TAG, "from server:" + objData);
                     break;
             }
@@ -194,7 +225,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     public void string(View view) {
         if (mMessenger != null) {
             clientSendMsg(FROM_CLIENT_GETSTRING);
@@ -203,7 +233,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void obj(View view) {
         if (mMessenger != null) {
-                clientSendMsg(FROM_CLIENT_GETOBJ);
+            clientSendMsg(FROM_CLIENT_GETOBJ);
         }
     }
 
@@ -222,11 +252,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
 
-        if(mManager!=null){
+        if (mManager != null) {
+            //解除监听
+            if (mOnNewModeAddLisenter != null) {
+                try {
+                    mManager.unregisterListener(mOnNewModeAddLisenter);
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
+            }
             unbindService(mServerConn);
         }
 
-        if (mMessengerConnection != null && mMessenger!=null) {
+        if (mMessengerConnection != null && mMessenger != null) {
             unbindService(mMessengerConnection);
         }
     }

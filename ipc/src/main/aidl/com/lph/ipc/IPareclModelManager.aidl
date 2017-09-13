@@ -4,6 +4,7 @@ package com.lph.ipc;
 // Declare any non-default types here with import statements
 
 import com.lph.ipc.model.ParcelMode;
+import com.lph.ipc.OnNewModeAddListener;
 
 import java.util.List;
 
@@ -17,5 +18,8 @@ interface IPareclModelManager {
 
     List<ParcelMode> getModes();
 
-    void addModel( in ParcelMode mode);
+    void addModel(in ParcelMode mode);
+
+    void registerListener(OnNewModeAddListener lisenter);
+    void unregisterListener(OnNewModeAddListener lisenter);
 }

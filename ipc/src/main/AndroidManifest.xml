@@ -5,6 +5,11 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <permission
+        android:name="com.lph.permission.PRO"
+        android:label="provider permission"
+        android:protectionLevel="normal" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -25,22 +30,25 @@
         <service
             android:name=".aidl.RemoteService"
             android:enabled="true"
-            android:exported="true"
-           >
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.lph.ipc.IPareclModelManager" />
             </intent-filter>
         </service>
-
         <service
             android:name=".aidl.MessengerService"
             android:enabled="true"
-            android:exported="true"
-            >
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.lph.ipc.MessagerService" />
             </intent-filter>
         </service>
+
+        <provider
+            android:name=".provider.ModelProvider"
+            android:authorities="com.lph.ipc.modelProvider"
+            android:exported="true"
+            android:permission="com.lph.permission.PRO"></provider>
 
     </application>
 

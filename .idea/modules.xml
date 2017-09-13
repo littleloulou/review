@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/aidlclinet/aidlclinet.iml" filepath="$PROJECT_DIR$/aidlclinet/aidlclinet.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/ipc/ipc.iml" filepath="$PROJECT_DIR$/ipc/ipc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/providerclient/providerclient.iml" filepath="$PROJECT_DIR$/providerclient/providerclient.iml" />
     </modules>
   </component>
 </project>
