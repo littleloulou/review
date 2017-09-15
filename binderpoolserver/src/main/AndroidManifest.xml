@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lph.ipc">
-
+    package="com.lph.binderpoolserver">
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
-
-    <permission
-        android:name="com.lph.permission.PRO"
-        android:label="provider permission"
-        android:protectionLevel="normal" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -26,32 +19,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".serial.TestActivity" />
-        <activity android:name=".serial.ParcelActivity" />
 
         <service
-            android:name=".aidl.RemoteService"
+            android:name=".service.QueryRemoteService"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.lph.ipc.IPareclModelManager" />
+                <action android:name="com.lph.bindpool.service" />
             </intent-filter>
         </service>
-        <service
-            android:name=".aidl.MessengerService"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="com.lph.ipc.MessagerService" />
-            </intent-filter>
-        </service>
-
-        <provider
-            android:name=".provider.ModelProvider"
-            android:authorities="com.lph.ipc.modelProvider"
-            android:exported="true"
-            android:permission="com.lph.permission.PRO"></provider>
-
     </application>
 
 </manifest>

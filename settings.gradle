@@ -1,1 +1,1 @@
-include ':app', ':aboutactivity', ':ipc', ':aidlclinet', ':providerclient'
+include ':app', ':aboutactivity', ':ipc', ':aidlclinet', ':providerclient', ':socketclient', ':socketserver', ':binderpoolserver', ':binderpoolclinet'

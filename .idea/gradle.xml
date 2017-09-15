@@ -11,8 +11,12 @@
             <option value="$PROJECT_DIR$/aboutactivity" />
             <option value="$PROJECT_DIR$/aidlclinet" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/binderpoolclinet" />
+            <option value="$PROJECT_DIR$/binderpoolserver" />
             <option value="$PROJECT_DIR$/ipc" />
             <option value="$PROJECT_DIR$/providerclient" />
+            <option value="$PROJECT_DIR$/socketclient" />
+            <option value="$PROJECT_DIR$/socketserver" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
