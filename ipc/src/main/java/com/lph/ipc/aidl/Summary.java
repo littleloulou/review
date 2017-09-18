@@ -19,4 +19,8 @@ public interface Summary {
             java.srcDirs = ['src/main/java', 'src/main/aidl']
         }
     }*/
+
+    /**
+     * 客户端使用aidl文件时，先通过ide创建一个aidl文件，系统回自动生成一个aidl文件夹，然后在这里创建一个服务端相同的包名，再把aidl文件copy进来
+     */
 }

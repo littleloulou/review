@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/providerclient" />
             <option value="$PROJECT_DIR$/socketclient" />
             <option value="$PROJECT_DIR$/socketserver" />
+            <option value="$PROJECT_DIR$/view" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
