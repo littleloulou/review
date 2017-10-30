@@ -5,13 +5,18 @@
       <module fileurl="file://$PROJECT_DIR$/MyReview.iml" filepath="$PROJECT_DIR$/MyReview.iml" />
       <module fileurl="file://$PROJECT_DIR$/aboutactivity/aboutactivity.iml" filepath="$PROJECT_DIR$/aboutactivity/aboutactivity.iml" />
       <module fileurl="file://$PROJECT_DIR$/aidlclinet/aidlclinet.iml" filepath="$PROJECT_DIR$/aidlclinet/aidlclinet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/animation/animation.iml" filepath="$PROJECT_DIR$/animation/animation.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/binderpoolclinet/binderpoolclinet.iml" filepath="$PROJECT_DIR$/binderpoolclinet/binderpoolclinet.iml" />
       <module fileurl="file://$PROJECT_DIR$/binderpoolserver/binderpoolserver.iml" filepath="$PROJECT_DIR$/binderpoolserver/binderpoolserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/ipc/ipc.iml" filepath="$PROJECT_DIR$/ipc/ipc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netlib/netlib.iml" filepath="$PROJECT_DIR$/netlib/netlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parselib/parselib.iml" filepath="$PROJECT_DIR$/parselib/parselib.iml" />
       <module fileurl="file://$PROJECT_DIR$/providerclient/providerclient.iml" filepath="$PROJECT_DIR$/providerclient/providerclient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/remoteview/remoteview.iml" filepath="$PROJECT_DIR$/remoteview/remoteview.iml" />
       <module fileurl="file://$PROJECT_DIR$/socketclient/socketclient.iml" filepath="$PROJECT_DIR$/socketclient/socketclient.iml" />
       <module fileurl="file://$PROJECT_DIR$/socketserver/socketserver.iml" filepath="$PROJECT_DIR$/socketserver/socketserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/tools.iml" filepath="$PROJECT_DIR$/tools/tools.iml" />
       <module fileurl="file://$PROJECT_DIR$/view/view.iml" filepath="$PROJECT_DIR$/view/view.iml" />
     </modules>
   </component>

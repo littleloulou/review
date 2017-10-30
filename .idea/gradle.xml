@@ -10,13 +10,18 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/aboutactivity" />
             <option value="$PROJECT_DIR$/aidlclinet" />
+            <option value="$PROJECT_DIR$/animation" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/binderpoolclinet" />
             <option value="$PROJECT_DIR$/binderpoolserver" />
             <option value="$PROJECT_DIR$/ipc" />
+            <option value="$PROJECT_DIR$/netlib" />
+            <option value="$PROJECT_DIR$/parselib" />
             <option value="$PROJECT_DIR$/providerclient" />
+            <option value="$PROJECT_DIR$/remoteview" />
             <option value="$PROJECT_DIR$/socketclient" />
             <option value="$PROJECT_DIR$/socketserver" />
+            <option value="$PROJECT_DIR$/tools" />
             <option value="$PROJECT_DIR$/view" />
           </set>
         </option>

@@ -1,1 +1,1 @@
-include ':app', ':aboutactivity', ':ipc', ':aidlclinet', ':providerclient', ':socketclient', ':socketserver', ':binderpoolserver', ':binderpoolclinet', ':view'
+include ':app', ':aboutactivity', ':ipc', ':aidlclinet', ':providerclient', ':socketclient', ':socketserver', ':binderpoolserver', ':binderpoolclinet', ':view', ':tools', ':remoteview', ':animation', ':netlib', ':parselib'
