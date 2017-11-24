@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/aboutactivity" />
             <option value="$PROJECT_DIR$/aidlclinet" />
+            <option value="$PROJECT_DIR$/algorithm" />
             <option value="$PROJECT_DIR$/animation" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/binderpoolclinet" />
@@ -21,6 +22,7 @@
             <option value="$PROJECT_DIR$/remoteview" />
             <option value="$PROJECT_DIR$/socketclient" />
             <option value="$PROJECT_DIR$/socketserver" />
+            <option value="$PROJECT_DIR$/thread" />
             <option value="$PROJECT_DIR$/tools" />
             <option value="$PROJECT_DIR$/view" />
           </set>
