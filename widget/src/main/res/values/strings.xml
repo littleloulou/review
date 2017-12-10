@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Widget</string>
+    <!--导航栏资源-->
+    <string name="main_tab_name_news">综合</string>
+    <string name="main_tab_name_tweet">动弹</string>
+    <string name="main_tab_name_my">我的</string>
+    <string name="main_tab_name_explore">发现</string>
+    <!--导航栏资源-->
+</resources>

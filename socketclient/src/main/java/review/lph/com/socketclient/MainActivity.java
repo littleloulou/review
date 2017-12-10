@@ -16,7 +16,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
 import java.net.Socket;
+import java.net.SocketAddress;
+import java.net.SocketException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -42,8 +48,11 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 while (mClient == null) {
                     try {
+                        //创建socket客户端，并指明主机地址和端口号，这个端口号必须和服务端的创建的serverSocket端口号相同
+                        //该方法会自动执行connect方法
                         mClient = new Socket("localhost", 8888);
                         mPrintWriter = new PrintWriter(new OutputStreamWriter(mClient.getOutputStream()), true);
+                        //可以通过mClient获取输出流，和输入流，分别像服务端写入数据和从服务端读取数据
                         mReader = new BufferedReader(new InputStreamReader(mClient.getInputStream()));
                         while (!MainActivity.this.isFinishing()) {
                             String line = null;
@@ -85,4 +94,34 @@ public class MainActivity extends AppCompatActivity {
         }
         super.onDestroy();
     }
+
+    public void initUDPSocket() {
+        try {
+            InetSocketAddress address = InetSocketAddress.createUnresolved("localhost", 8888);
+            DatagramSocket client = new DatagramSocket(address);
+            String data = "hello";
+            DatagramPacket datagramPacket = new DatagramPacket(data.getBytes(), data.getBytes().length);
+            client.send(datagramPacket);
+        } catch (SocketException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void initUDPServer() {
+        try {
+            //端口需要和客户端的端口保持一致
+            DatagramSocket server = new DatagramSocket(8888);
+            byte[] data = new byte[1024 * 1024];
+            DatagramPacket datagramPacket = new DatagramPacket(data, data.length);
+            server.receive(datagramPacket);
+            System.out.println("获取到客户端数据：" + String.valueOf(data));
+        } catch (SocketException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

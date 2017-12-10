@@ -65,7 +65,7 @@ public class TcpServerService extends Service {
         @Override
         public void run() {
             try {
-                //创建了一个服务端对象，用来和客户端交互
+                //创建了一个服务端对象，用来和客户端交互，端口号必须保证和客户端的一致
                 serverSocket = new ServerSocket(8888);
                 //开启一个线程不停的接收客户端
                 new Thread() {

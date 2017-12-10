@@ -1,6 +1,5 @@
 package com.lph.algorithm;
 
-import java.util.Arrays;
 
 /**
  * Created by lph on 2017/11/19.
@@ -30,7 +29,7 @@ public class SortUtil {
         for (int i = 0; i < array.length - 1; i++) {
             //每次排序选择出最小的,放在最左边
             for (int j = i + 1; j < array.length; j++) {
-                //拿着当前arry[i]处的元素一依次和后面的元素比较，如果有比它小的，就交换位置
+                //拿着当前array[i]处的元素一依次和后面的元素比较，如果有比它小的，就交换位置
                 if (array[i] > array[j]) {
                     array[i] = array[i] + array[j];
                     array[j] = array[i] - array[j];
@@ -99,19 +98,19 @@ public class SortUtil {
      * @return 查找到元素的索引,-1表示没有找到
      */
     public static int binarySearch(int key, int[] array) {
-        int low, heigh, mid;
+        int low, height, mid;
         low = 0;
-        heigh = array.length - 1;
-        mid = (low + heigh) / 2;
-        while (low < heigh) {
+        height = array.length - 1;
+        mid = (low + height) / 2;
+        while (low < height) {
             if (key > array[mid]) {
                 low = mid + 1;
             } else if (key < array[mid]) {
-                heigh = mid - 1;
+                height = mid - 1;
             } else {
                 return mid;
             }
-            mid = (low + heigh) / 2;
+            mid = (low + height) / 2;
         }
         return array[mid] == key ? mid : -1;
     }

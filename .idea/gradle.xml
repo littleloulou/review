@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/binderpoolclinet" />
             <option value="$PROJECT_DIR$/binderpoolserver" />
+            <option value="$PROJECT_DIR$/interview" />
             <option value="$PROJECT_DIR$/ipc" />
             <option value="$PROJECT_DIR$/netlib" />
             <option value="$PROJECT_DIR$/parselib" />
@@ -22,9 +23,11 @@
             <option value="$PROJECT_DIR$/remoteview" />
             <option value="$PROJECT_DIR$/socketclient" />
             <option value="$PROJECT_DIR$/socketserver" />
+            <option value="$PROJECT_DIR$/sourcecode" />
             <option value="$PROJECT_DIR$/thread" />
             <option value="$PROJECT_DIR$/tools" />
             <option value="$PROJECT_DIR$/view" />
+            <option value="$PROJECT_DIR$/widget" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
